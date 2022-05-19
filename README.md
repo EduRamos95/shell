@@ -1,2 +1,2 @@
-# shell
-proyecto_05
+#!/bin/bash
+proyecto 05
