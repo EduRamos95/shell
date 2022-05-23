@@ -1,4 +1,5 @@
  shell basics
+
 cd: this command allows you to change the current working directory.
 
 ls: this command is used to list files, on its own lists all file in the current directory except for hidden files.
