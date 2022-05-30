@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#This script display "Best School" until loop
+i=0;until ((i>9));do echo "Best School";((++i));done
+
