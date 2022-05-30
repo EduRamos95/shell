@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 #This scripts content the current directory without initial "-" 
-for f in $(ls);do echo "$f" | cut -d "-" -f2 ;done
+file=$(ls);for f in $file;do echo "$f" | cut -d "-" -f2 ;done
