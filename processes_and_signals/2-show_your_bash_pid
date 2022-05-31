@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#This scripts display the PID of your Bash
+#dont use pgrep
+ps -auxf | grep bash
