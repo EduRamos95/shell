@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #This scripts display the content of the file "/etc/passwd"
 #Tou must use the while loop
-FILE = "/etc/passwd"
+FILE="/etc/passwd"
 while IFS= read -r LINE
 do
   echo "${LINE}" | cut -d ':' -f1,4,7
