@@ -5,5 +5,5 @@
 #Display “user-oriented:u” 
 #Dispay “TTY:Lift the BSD-style "must have a tty" restriction, which is imposed upon the set of all processes when some BSD-style (without "-"):x”
 #Display “ASCII art process hierarchy (forest):f”
-ps u -Axf
+ps -Auxf
 
