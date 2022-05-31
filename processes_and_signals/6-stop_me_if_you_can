@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
 #This script stops 4-to_infinity_and_beyond process.
 #Cannot use kill or killall
-msg()
-{
-	echo "1 No processes matched"
-}
-trap "msg" SIGTERM
+
 pkill -f "4-to_infinity_and_beyond"
