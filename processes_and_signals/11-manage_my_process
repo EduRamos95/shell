@@ -24,7 +24,7 @@ case "$argv1" in
 	;;
     restart) echo "manage_my_process restarted"
 	stop_rmFile
-	star_File
+	start_File
 	;;
     *) echo "Usage: manage_my_process {start|stop|restart}"
 	;;
