@@ -4,7 +4,7 @@
 
 no_file()
 {
-	rm -f "/var/run/myscript.pid" ;
+	sudo rm -f "/var/run/myscript.pid" ;
 }
 
 k_process()
@@ -14,9 +14,9 @@ k_process()
 
 
 
-echo "$$" > /var/run/myscript.pid
-trap "echo 'I hate the kill command'; no_file ; k_process" SIGTERM
-trap "no_file; k_process" SIGQUIT
+echo "$$" > "/var/run/myscript.pid"
+trap "echo 'I hate the kill command'; no_file ; exit" SIGTERM
+trap "no_file; exit" SIGQUIT
 trap "echo 'Y U no love me?!'" SIGINT
 
 while (true)
