@@ -2,9 +2,21 @@
 #This script create a file containing its PDI
 #Do something indefinitely; and when receiving a SIGTERM, SIGINT and SIGQUIT
 
-echo $$ > /var/run/myscript.pid
-trap "echo 'I hate the kill command';rm /var/run/myscript.pid;exit" SIGTERM
-trap "rm /var/run/myscript.pid;exit" SIGQUIT
+no_file()
+{
+	rm -f "/var/run/myscript.pid" ;
+}
+
+k_process()
+{
+	pkill -9 -f "10-process_and_pid_file" ;
+}
+
+
+
+echo "$$" > /var/run/myscript.pid
+trap "echo 'I hate the kill command'; no_file ; k_process" SIGTERM
+trap "no_file; k_process" SIGQUIT
 trap "echo 'Y U no love me?!'" SIGINT
 
 while (true)
