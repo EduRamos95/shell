@@ -2,11 +2,12 @@
 #This script create a file containing its PDI
 #Do something indefinitely; and when receiving a SIGTERM, SIGINT and SIGQUIT
 
-echo "$$" > /var/run/myscript.pid
-trap "echo 'I hate the kill command' ;rm /var/run/myscript.pid; exit" SIGTERM
-trap "rm /var/run/myscript.pid; exit" SIGQUIT
+echo $$ > /var/run/myscript.pid
+trap "echo 'I hate the kill command';rm /var/run/myscript.pid;exit" SIGTERM
+trap "rm /var/run/myscript.pid;exit" SIGQUIT
 trap "echo 'Y U no love me?!'" SIGINT
-while true
+
+while (true)
 do
   echo "To infinity and beyond"
   sleep 2
